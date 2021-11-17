@@ -1,12 +1,15 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button/Button'
 
-// Nom de la fonction = nom du composant
 function App() {
   return (
     <div className="App">
-        Hey you!
+        <Button/>
+        <Button/>
+        <Button/>
+        <Button/>
     </div>
   );
 }
