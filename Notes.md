@@ -34,11 +34,6 @@ Transposition des attributs js en react => className
 
 A la différence de NPM, Yarn construit mieux l'arbre de dépendances
 
-Liste des pluggins à installer : 
-React JS Extensions Pack extension pour eslint et prettier
-Add git graph extension
-ES7 React/Redux/GraphQL/React-Native snippets
-
 Stateless : composant sans props, n'est pas responsable de modifier l'état, rend ce qui reçoit de son parent
 
 Statefull : Composant qui a ses propres props 
@@ -52,3 +47,26 @@ Un export default par fichier, on peut changer le nom du composant au moment de 
 Le parent n'a pas besoin de savoir tout l'event de son enefant, chaque composant gère son event
 
 propTypes pour définir la nature des props
+
+Ajouter à chrome l'extension react developper tools, ça rajoute un volet components dans F12
+
+Les pluggins VS Code à installer
+- Debugger for firefox
+- Devtools for chrome
+- Debugger for Microsoft Edge
+- ES7 React/Redux/GraphQL/React-Native Snippets
+- React JS Extensions Pack
+- Git graph
+- Jest Snippets
+- Jest Test Explorer
+- Test explorer UI
+- JS Snippet
+- Lorem ipsum
+- Lorem Picsum
+- MUI Snippets
+- Simpte React Snippets
+- Redux Devtools
+- Reactjs code snippets
+- React-Bootstrap Snippets
+
+Pour visualiser la liste des pluggins installés : @installed

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Button text="OK" />
-      <Button text="Cancel" />
+      <Button text="Cancel" color="yellow" />
       <Button
         text="Don't"
         bgColor="tomato"
