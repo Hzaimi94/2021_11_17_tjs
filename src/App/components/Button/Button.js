@@ -1,6 +1,7 @@
 // Pour dire que ces fonctions sont des composants
 import React from "react";
 import "./Button.css";
+import PropTypes from 'prop-types';
 
 /**
  * Composant button HTML
@@ -16,4 +17,8 @@ const Button = (props) => {
   );
 };
 
+Button.propTypes={
+  text: PropTypes.string.isRequired,
+  onButtonClicked: PropTypes.func.isRequired,
+}
 export default Button;

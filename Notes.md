@@ -50,3 +50,5 @@ What happens in Vages stays in Vegas, il faut exporter les composants pour les r
 Un export default par fichier, on peut changer le nom du composant au moment de l'import
 
 Le parent n'a pas besoin de savoir tout l'event de son enefant, chaque composant gère son event
+
+propTypes pour définir la nature des props
