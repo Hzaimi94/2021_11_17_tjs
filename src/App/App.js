@@ -6,7 +6,7 @@ import Button from "./components/Button/Button";
 function App() {
   return (
     <div className="App">
-      <Button text="OK" />
+      <Button text="OK" style={{fontSize:'40pt'}}/>
       <Button text="Cancel" color="yellow" />
       <Button
         text="Don't"
