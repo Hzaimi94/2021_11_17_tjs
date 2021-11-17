@@ -78,3 +78,7 @@ Ne jamais utiliser des alertes ou des confirm dans le code car ça bloque l'exec
 Snipp rccp pour contruire le squelette de APP.js
 
 CSS module pour pallier aux problèmes de composants portant le même nom et éviter les collisions de classes (avec material ui par exemple). Il affecte des noms random au classe pour qu'elles ne fusionnent pas 
+
+un composant par fichier, sauf si le composant est uniquement utilisé par un specifique parent dans ce cas on peut avoir 2 composants dans le même fichier
+
+props = {} pour dire que c'est du JS, pas de if ou de loop
