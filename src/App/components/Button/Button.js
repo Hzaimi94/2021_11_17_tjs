@@ -1,6 +1,6 @@
 // Pour dire que ces fonctions sont des composants
 import React from "react";
-import './Button.css'
+import "./Button.css";
 
 /**
  * Composant button HTML
@@ -9,7 +9,11 @@ import './Button.css'
  */
 const Button = (props) => {
   console.log(props);
-  return <button className="Button">Submit button</button>;
+  return (
+    <button className="Button" onClick={(evt) => props.onButtonClicked()}>
+      {props.text}
+    </button>
+  );
 };
 
 export default Button;
