@@ -85,11 +85,14 @@ props = {} pour dire que c'est du JS, pas de if ou de loop
 
 On ne mute pas le state, on dispose de setState pour avertir du changement du state
 
-Le cycle de vie du composant, didmount, didupdate, diddelete qui s'effectuent après le setstate et avant render. Elles ont utiles car les changements sont asynchrones on ne sait pas forcément quand le composant sera changé.
+Le cycle de vie du composant, componentdidmount, componentdidupdate, componentwillunmount qui s'effectuent après le setstate et avant render. Elles ont utiles car les changements sont asynchrones on ne sait pas forcément quand le composant sera changé.
 
 Mountage s'exécute après le constructeur
 Mise à jour après new props ou setstate
 
-
 console.log(arguments) pour lister les arguments demandés par une fonction
+
+useState est un hook pour remplacer l'utilisation des classes
+
+UseEffect and useState sont les hooks les plus utilisés dans React. Il y'a environ 20 hooks en total dans React
 

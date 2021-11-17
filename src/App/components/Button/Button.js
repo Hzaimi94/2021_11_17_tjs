@@ -17,9 +17,14 @@ const Button = (props) => {
       style={{
         backgroundColor: props.bgColor,
         color: props.color,
-        ...props.style, // props.style ecrasera les props précédents
+        ...props.style, // props.style écrasera les props précédents
       }}
       onClick={(evt) => {
+        // ...clicked pour ne pas écraser l'ancien state
+        setClicked({...clicked, state: true });
+        setTimeout(()=>{
+          setClicked({...clicked, state: false });
+        }, 300)
         props.onButtonClicked();
       }}
     >
