@@ -36,7 +36,9 @@ A la différence de NPM, Yarn construit mieux l'arbre de dépendances
 
 Stateless : composant sans props, n'est pas responsable de modifier l'état, rend ce qui reçoit de son parent
 
-Statefull : Composant qui a ses propres props 
+Statefull : Composant qui a ses propres props, a la capacité de changer leurs props
+
+Quand les props changent, le render se fait automatiquement
 
 Button est une function car aucune responsabilité métier
 
@@ -70,3 +72,9 @@ Les pluggins VS Code à installer
 - React-Bootstrap Snippets
 
 Pour visualiser la liste des pluggins installés : @installed
+
+Ne jamais utiliser des alertes ou des confirm dans le code car ça bloque l'execution
+
+Snipp rccp pour contruire le squelette de APP.js
+
+CSS module pour pallier aux problèmes de composants portant le même nom et éviter les collisions de classes (avec material ui par exemple)
