@@ -10,3 +10,5 @@ import './Button.css'
 const Button = (props) => {
   return <button className="Button">Submit button</button>;
 };
+
+export default Button;
