@@ -8,6 +8,7 @@ import './Button.css'
  * @returns button render
  */
 const Button = (props) => {
+  console.log(props);
   return <button className="Button">Submit button</button>;
 };
 
