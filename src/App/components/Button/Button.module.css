@@ -12,3 +12,8 @@
 .Button:hover{
     box-shadow: 10px 10px 25px cadetblue;
 }
+
+.clicked{
+    box-shadow: 15px 15px 25px cadetblue !important;
+    border: 1px solid grey;
+}

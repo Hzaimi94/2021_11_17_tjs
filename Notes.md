@@ -82,3 +82,14 @@ CSS module pour pallier aux problèmes de composants portant le même nom et év
 un composant par fichier, sauf si le composant est uniquement utilisé par un specifique parent dans ce cas on peut avoir 2 composants dans le même fichier
 
 props = {} pour dire que c'est du JS, pas de if ou de loop
+
+On ne mute pas le state, on dispose de setState pour avertir du changement du state
+
+Le cycle de vie du composant, didmount, didupdate, diddelete qui s'effectuent après le setstate et avant render. Elles ont utiles car les changements sont asynchrones on ne sait pas forcément quand le composant sera changé.
+
+Mountage s'exécute après le constructeur
+Mise à jour après new props ou setstate
+
+
+console.log(arguments) pour lister les arguments demandés par une fonction
+

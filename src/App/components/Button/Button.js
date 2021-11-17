@@ -1,5 +1,5 @@
 // Pour dire que ces fonctions sont des composants
-import React from "react";
+import React, { useState } from "react";
 import style from "./Button.module.css";
 import PropTypes from "prop-types";
 
@@ -9,16 +9,19 @@ import PropTypes from "prop-types";
  * @returns button render
  */
 const Button = (props) => {
+  const [clicked, setClicked] = useState({ state: false, autreValue: "Vamos" });
   console.log(props);
   return (
     <button
-      className={style.Button}
+      className={`${style.Button}${clicked.state ? " " + style.clicked : ""}`}
       style={{
         backgroundColor: props.bgColor,
         color: props.color,
         ...props.style, // props.style ecrasera les props précédents
       }}
-      onClick={(evt) => props.onButtonClicked()}
+      onClick={(evt) => {
+        props.onButtonClicked();
+      }}
     >
       {props.text}
     </button>
