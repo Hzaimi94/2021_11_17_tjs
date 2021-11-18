@@ -138,6 +138,47 @@ function MemeForm(props) {
         <hr />
 
         <div className={styles.half}>
+          <div>
+            <label id="f_weight" htmlFor="f_weight">
+              Font-weight:
+            </label>
+            <br />
+            <input
+              type="number"
+              min="100"
+              step="100"
+              max="900"
+              className={styles.smallInput}
+              value={props.meme.fontWeight}
+              onChange={(evt) => {
+                props.onMemeChange({
+                  ...props.meme,
+                  fontWeight: evt.target.value,
+                });
+              }}
+            />
+          </div>
+          <div>
+            <label id="f_size" htmlFor="f_size">
+              Font Size:
+            </label>
+            <br />
+            <input
+              type="number"
+              className={styles.smallInput}
+              value={props.meme.fontSize}
+              onChange={(evt) => {
+                props.onMemeChange({
+                  ...props.meme,
+                  fontSize: Number(evt.target.value),
+                });
+              }}
+            />
+          </div>
+        </div>
+        <hr />
+
+        <div className={styles.half}>
           <Button type="reset" bgColor="tomato" text="Clear" />
           <Button type="submit" bgColor="green" text="Save" />
         </div>
