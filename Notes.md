@@ -96,3 +96,4 @@ useState est un hook pour remplacer l'utilisation des classes
 
 UseEffect and useState sont les hooks les plus utilisés dans React. Il y'a environ 20 hooks en total dans React
 
+Les modifications d'état sont faites de façon asynchrone

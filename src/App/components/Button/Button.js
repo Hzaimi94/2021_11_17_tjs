@@ -1,5 +1,5 @@
 // Pour dire que ces fonctions sont des composants
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Button.module.css";
 import PropTypes from "prop-types";
 
@@ -9,7 +9,29 @@ import PropTypes from "prop-types";
  * @returns button render
  */
 const Button = (props) => {
-  const [clicked, setClicked] = useState({ state: false, autreValue: "Vamos" });
+  const [clicked, setClicked] = useState({
+    state: false,
+    autreValue: "Whatever",
+  });
+
+  // Fait les 3 méthodes du cycle de vie
+  useEffect(() => {
+    // Fait didMount et didUpdate selon le tableau [Input]
+    // [Input] ce qui sera observé
+    // Si le input est monté ou subit une modif, on va exécuter effect
+    // effect
+    if (!clicked.state) {
+      return;
+    }
+    console.log(clicked);
+    setTimeout(() => {
+      setClicked({ ...clicked, state: false });
+    }, 300);
+    // Retourne la fonction WillUnmount
+    //return () => {
+    //  cleanup
+    //}
+  }, [clicked]);
   console.log(props);
   return (
     <button
@@ -21,10 +43,7 @@ const Button = (props) => {
       }}
       onClick={(evt) => {
         // ...clicked pour ne pas écraser l'ancien state
-        setClicked({...clicked, state: true });
-        setTimeout(()=>{
-          setClicked({...clicked, state: false });
-        }, 300)
+        setClicked({ ...clicked, state: true });
         props.onButtonClicked();
       }}
     >
