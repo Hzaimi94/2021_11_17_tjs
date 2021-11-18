@@ -101,3 +101,5 @@ Les modifications d'état sont faites de façon asynchrone
 Il faut jamais prefixer un nom de répertoire avec un . sinon ça pète les tests
 
 Test explorer permet de rajouter une fiole pour exécuter les tests
+
+On peut créer des templates pour générer des Reducers
