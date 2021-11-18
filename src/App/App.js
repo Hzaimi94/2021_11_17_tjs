@@ -26,15 +26,15 @@ class App extends React.Component {
           meme={{
             titre: "First meme",
             text: "Stop cheating",
-            x: 200,
-            y: 600,
-            fontSize: 18,
-            fontWeight: "200",
+            x: 370,
+            y: 530,
+            fontSize: 27,
+            fontWeight: "900",
             underline: true,
             italic: true,
             frameX: 0,
             frameY: 0,
-            color: "black",
+            color: "red",
           }}
           image={{
             id: 0,
