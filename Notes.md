@@ -107,3 +107,5 @@ On peut créer des templates pour générer des Reducers
 Pour ne pas avoir à se retaper toute le commande à chaque fois npm genHooked componentName
 
 devdocs.io pour la documentation complète
+
+tsx pour les composants et ts pour le code interface...

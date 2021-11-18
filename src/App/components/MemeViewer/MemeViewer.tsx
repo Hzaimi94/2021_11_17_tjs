@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./MemeViewer.module.scss";
+import { I_Image, I_Meme } from "../../interfaces/interfaces";
 
-const MemeViewer = (props) => (
+interface I_Props {
+  meme: I_Meme;
+  image?: I_Image;
+}
+
+const MemeViewer = (props: I_Props) => (
   // data-testid pour le test
   <svg
     className={styles.MemeViewer}
@@ -25,10 +31,11 @@ const MemeViewer = (props) => (
   </svg>
 );
 
-MemeViewer.propTypes = {
-  meme: PropTypes.object.isRequired,
-  image: PropTypes.object,
-};
+// Perd son sens avec les interfaces 
+//MemeViewer.propTypes = {
+//  meme: PropTypes.object.isRequired,
+//  image: PropTypes.object,
+//};
 
 MemeViewer.defaultProps = {};
 
