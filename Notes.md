@@ -109,3 +109,5 @@ Pour ne pas avoir à se retaper toute le commande à chaque fois npm genHooked c
 devdocs.io pour la documentation complète
 
 tsx pour les composants et ts pour le code interface...
+
+Pour des types complexes préviligier le TS sinon JS
