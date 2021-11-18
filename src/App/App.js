@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./components/Button/Button";
+import MemeViewer from "./components/MemeViewer/MemeViewer";
 
 class App extends React.Component {
   counter = 0;
@@ -12,32 +12,38 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log('%c%s', 'font-size:20pt;color:red', 'Change complete ' +this.state.counter)
+    console.log(
+      "%c%s",
+      "font-size:20pt;color:red",
+      "Change complete " + this.state.counter
+    );
   }
 
   render() {
     return (
       <div className="App">
-        counter:{this.state.counter}
-        <br />
-        <Button
-          text="Minus 1"
-          onButtonClicked={() => {
-            this.counter--;
-            this.setState({counter:this.state.counter-1})
-            //this.forceUpdate() à ne jamais utiliser même si ça marche
-            console.log('minus log', this.state);
+        <MemeViewer
+          meme={{
+            titre: "First meme",
+            text: "Stop cheating",
+            x: 200,
+            y: 600,
+            fontSize: 18,
+            fontWeight: "200",
+            underline: true,
+            italic: true,
+            frameX: 0,
+            frameY: 0,
+            color: "black",
           }}
-          bgColor="red"
-        ></Button>
-        <Button
-          text="Plus 1"
-          onButtonClicked={() => {
-            this.setState({counter:this.state.counter+1})
-            console.log('plus log', this.state);
+          image={{
+            id: 0,
+            url: "img/empty1.jpg",
+            titre: "meme1",
+            h: 778,
+            w: 736,
           }}
-          bgColor="green"
-        ></Button>
+        ></MemeViewer>
       </div>
     );
   }

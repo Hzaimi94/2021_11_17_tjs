@@ -103,3 +103,5 @@ Il faut jamais prefixer un nom de répertoire avec un . sinon ça pète les test
 Test explorer permet de rajouter une fiole pour exécuter les tests
 
 On peut créer des templates pour générer des Reducers
+
+Pour ne pas avoir à se retaper toute le commande à chaque fois npm genHooked componentName
