@@ -97,3 +97,7 @@ useState est un hook pour remplacer l'utilisation des classes
 UseEffect and useState sont les hooks les plus utilisés dans React. Il y'a environ 20 hooks en total dans React
 
 Les modifications d'état sont faites de façon asynchrone
+
+Il faut jamais prefixer un nom de répertoire avec un . sinon ça pète les tests
+
+Test explorer permet de rajouter une fiole pour exécuter les tests
