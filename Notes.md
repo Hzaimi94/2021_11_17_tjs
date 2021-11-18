@@ -115,3 +115,30 @@ Pour des types complexes préviligier le TS sinon JS
 useState on donne tout le state par contre dans une classe on donne uniquement ce qui change,  pas de useState dans une classe
 
 Si on met pas à jour le parent, impossible de modifier l'état du composant
+
+Redux prend tout son sens quand il s'agit de manipuler plusieurs composants
+
+Patch comme le spread, on n'envoie que les paramètres qui vont changer
+
+# Ancienne method
+var x = new XMLHttpRequest();
+x.open('POST', 'http://localhost:5629/memes')
+x.setRequestHeader("Content-type", "application/json")
+x.onreadystatechange = function(evt) {
+    if(evt.target.readyState < XMLHttpRequest.DONE) {
+        return;
+    }
+    if(evt.target.status !== 201) {
+        return;
+    }
+    console.log(JSON.parse(evt.target.response));
+}
+x.send(JSON.stringify({bidon: '1L'}))
+
+# 2021 method (utiliser la console f12 pour coder)
+fetch('http://localhost:5629/memes/0', {method:'GET'}).then(f=> {return f.json()}).then(o => {console.log(o)})
+
+Promise.all([x,z]) => Il va attendre que x et z soient faites
+
+Axios ne sert à rien, utiliser fetch
+
