@@ -46,6 +46,7 @@ const Button = (props) => {
         setClicked({ ...clicked, state: true });
         props.onButtonClicked();
       }}
+      type={props.text}
     >
       {props.text}
     </button>
@@ -58,6 +59,7 @@ Button.propTypes = {
   bgColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   style: PropTypes.object,
+  type: PropTypes.string,
 };
 
 // When parent props are not provided

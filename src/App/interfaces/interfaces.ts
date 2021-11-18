@@ -12,6 +12,7 @@ export interface I_Meme {
   frameX: number;
   frameY: number;
   color: string;
+  imageId: number;
 }
 
 export interface I_Image {

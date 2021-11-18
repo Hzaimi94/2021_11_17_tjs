@@ -111,3 +111,7 @@ devdocs.io pour la documentation complète
 tsx pour les composants et ts pour le code interface...
 
 Pour des types complexes préviligier le TS sinon JS
+
+useState on donne tout le state par contre dans une classe on donne uniquement ce qui change,  pas de useState dans une classe
+
+Si on met pas à jour le parent, impossible de modifier l'état du composant
