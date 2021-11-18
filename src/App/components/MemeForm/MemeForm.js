@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const initialState = {};
@@ -6,9 +6,9 @@ function MemeForm(props) {
   const [state, setState] = useState(initialState);
   useEffect(() => {
     // didMount + didUpdate
-    return () => {
+    //return () => {
       // willUnmount
-    };
+    //};
   }, [state]);
   return <div data-testid="MemeForm">memeForm</div>;
 }
