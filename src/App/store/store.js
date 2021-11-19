@@ -1,7 +1,7 @@
 import { combineReducers, createStore } from "redux";
 import { REST_ADR, REST_RESOURCES } from "../config/config";
 
-const resourcesInitialState = {
+export const resourcesInitialState = {
   memes: [],
   images: [],
 };
@@ -83,7 +83,7 @@ export const currentInitialState = {
   imageId: -1,
 };
 
-const CURRENT_PUBLIC_ACTIONS = Object.freeze({
+export const CURRENT_PUBLIC_ACTIONS = Object.freeze({
   UPDATE_CURRENT: "UPDATE_CURRENT",
   CLEAR_MEME: "CLEAR_MEME",
   SAVE_MEME: "SAVE_MEME",
