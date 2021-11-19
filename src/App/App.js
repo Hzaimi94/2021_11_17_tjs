@@ -8,6 +8,7 @@ import MemeThumbnail from "./components/MemeThumbnail/MemeThumbnail";
 import MemeViewer from "./components/MemeViewer/MemeViewer";
 import Navbar from "./components/Navbar/Navbar";
 import { REST_ADR, REST_RESOURCES } from "./config/config";
+import { Switch, Route } from "react-router-dom";
 
 import store, {
   currentInitialState,
@@ -39,23 +40,37 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <Navbar></Navbar>
         <div className="App">
-          <MemeThumbnail></MemeThumbnail>
-          {/* <FlexLayout>
-            <MemeViewer
-              meme={this.props.current}
-              image={this.props.images.find(
-                (e) => e.id === this.props.current.imageId
-              )}
-            ></MemeViewer>
-            <MemeForm
-              meme={this.props.meme}
-              onMemeChange={(meme) => {
-                this.setState({ current: meme });
-              }}
-              images={this.props.images}
-            ></MemeForm>
-          </FlexLayout> */}
+          <Switch>
+            <Route path="/" exact>
+              <h1>Bonjour et bienvenue</h1>
+              New meme generator 2021
+            </Route>
+            <Route path="/thumbnail">
+              <MemeThumbnail></MemeThumbnail>
+            </Route>
+            <Route path="/edit">
+              <FlexLayout>
+                <MemeViewer
+                  meme={this.props.current}
+                  image={this.props.images.find(
+                    (e) => e.id === this.props.current.imageId
+                  )}
+                ></MemeViewer>
+                <MemeForm
+                  meme={this.props.meme}
+                  onMemeChange={(meme) => {
+                    this.setState({ current: meme });
+                  }}
+                  images={this.props.images}
+                ></MemeForm>
+              </FlexLayout>
+            </Route>
+            <Route path="/">
+              <h1>404 !! Not found</h1>
+            </Route>
+          </Switch>
         </div>
       </>
     );
