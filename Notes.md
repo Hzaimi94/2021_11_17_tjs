@@ -142,3 +142,13 @@ Promise.all([x,z]) => Il va attendre que x et z soient faites
 
 Axios ne sert à rien, utiliser fetch
 
+npmtrends.com 
+
+aller sur un repo git et remplacer le .com par .dev pour accéder à l'outil d'édition en ligne (vscode) avec possibilité du commit et installation de packages 
+
+Object.seal pour ne pas modifier le contenu d'un object const
+a = Object.seal({a:10})
+
+Seal ne scelle pas la profondeur, les enfants, pour pallier à ça on a Object.freeze
+
+

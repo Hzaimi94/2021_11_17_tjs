@@ -4,6 +4,9 @@ import Header from "./components/Header/Header";
 import MemeForm from "./components/MemeForm/MemeForm";
 import MemeViewer from "./components/MemeViewer/MemeViewer";
 import Navbar from "./components/Navbar/Navbar";
+import { REST_ADR, REST_RESOURCES } from "./config/config";
+
+import store from './store/store.js'
 
 class App extends React.Component {
   counter = 0;
@@ -24,31 +27,25 @@ class App extends React.Component {
         color: "red",
         imageId: 0,
       },
-      images: [
-        {
-          id: 0,
-          url: "img/empty1.jpg",
-          titre: "meme1",
-          h: 778,
-          w: 736,
-        },
-        {
-          id: 1,
-          url: "img/empty2.jpg",
-          titre: "meme2",
-          h: 778,
-          w: 736,
-        },
-      ],
+      images: [],
     };
   }
 
+  componentDidMount() {
+    fetch(REST_ADR + REST_RESOURCES.images, { method: "GET" })
+      .then((f) => {
+        return f.json();
+      })
+      .then((arr) => this.setState({ images: arr }));
+  }
+
   componentDidUpdate() {
-    console.log(
-      "%c%s",
-      "font-size:20pt;color:red",
-      "Change complete " + this.state.counter
-    );
+    // console.log(
+    //   "%c%s",
+    //   "font-size:20pt;color:red",
+    //   "Change complete " + this.state.counter
+    // );
+    console.log(JSON.stringify(this.state));
   }
 
   // C'est obligatoirement 1 composant parent, pas de siblings !!!!
