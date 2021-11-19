@@ -151,4 +151,8 @@ a = Object.seal({a:10})
 
 Seal ne scelle pas la profondeur, les enfants, pour pallier à ça on a Object.freeze
 
+Il faut bien séparer les actions dans les bons reducers, pour ne pas avoir des appels concurrents -> Case INIT
 
+Dispatch c'est pour avertir tout le monde tous les reducers
+
+Pour éviter les dépendances cycliques entre le store et le reducer...
