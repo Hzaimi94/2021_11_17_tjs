@@ -156,3 +156,5 @@ Il faut bien séparer les actions dans les bons reducers, pour ne pas avoir des 
 Dispatch c'est pour avertir tout le monde tous les reducers
 
 Pour éviter les dépendances cycliques entre le store et le reducer...
+
+Redux devtools chrome extension
