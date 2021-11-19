@@ -60,3 +60,5 @@ store.dispatch({
   type: PUBLIC_RESOURCES_ACTIONS.ADD_MEME,
   value: [{ id: 20 }],
 });
+
+export default store
