@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import FlexLayout from "./components/FlexLayout/FlexLayout";
 import Header from "./components/Header/Header";
 import MemeForm from "./components/MemeForm/MemeForm";
+// Ne pas importer {} le composant deconnecté
+import MemeThumbnail from "./components/MemeThumbnail/MemeThumbnail";
 import MemeViewer from "./components/MemeViewer/MemeViewer";
 import Navbar from "./components/Navbar/Navbar";
 import { REST_ADR, REST_RESOURCES } from "./config/config";
@@ -38,7 +40,8 @@ class App extends React.Component {
       <>
         <Header />
         <div className="App">
-          <FlexLayout>
+          <MemeThumbnail></MemeThumbnail>
+          {/* <FlexLayout>
             <MemeViewer
               meme={this.props.current}
               image={this.props.images.find(
@@ -52,7 +55,7 @@ class App extends React.Component {
               }}
               images={this.props.images}
             ></MemeForm>
-          </FlexLayout>
+          </FlexLayout> */}
         </div>
       </>
     );
@@ -71,5 +74,5 @@ function mapDispatchToProps(dispatch) {
   return {};
 }
 
-// Je connect state et dispatch à mon APP
+// Je connecte state et dispatch à mon APP
 export default connect(mapStateToProps, mapDispatchToProps)(App);
