@@ -16,7 +16,8 @@
       "imageId": 0
     },
     {
-      "titre": "Second meme 2",
+      "id": 1,
+      "titre": "First meme",
       "text": "Stop cheating",
       "x": 360,
       "y": 500,
@@ -27,9 +28,52 @@
       "frameX": 0,
       "frameY": 0,
       "color": "red",
-      "imageId": 1,
-      "id": 1,
-      "value": "another_one"
+      "imageId": 0
+    },
+    {
+      "id": 2,
+      "titre": "First meme",
+      "text": "Stop cheating",
+      "x": 360,
+      "y": 500,
+      "fontSize": 27,
+      "fontWeight": "900",
+      "underline": true,
+      "italic": true,
+      "frameX": 0,
+      "frameY": 0,
+      "color": "red",
+      "imageId": 0
+    },
+    {
+      "id": 3,
+      "titre": "First meme",
+      "text": "Stop cheating",
+      "x": 360,
+      "y": 500,
+      "fontSize": 27,
+      "fontWeight": "900",
+      "underline": true,
+      "italic": true,
+      "frameX": 0,
+      "frameY": 0,
+      "color": "red",
+      "imageId": 0
+    },
+    {
+      "id": 4,
+      "titre": "First meme",
+      "text": "Stop cheating",
+      "x": 360,
+      "y": 500,
+      "fontSize": 27,
+      "fontWeight": "900",
+      "underline": true,
+      "italic": true,
+      "frameX": 0,
+      "frameY": 0,
+      "color": "red",
+      "imageId": 0
     }
   ],
   "images": [
